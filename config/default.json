@@ -1,0 +1,22 @@
+{
+  "mongoConnParas" : "mongodb://localhost:27017/movielist",
+  "log4jsConfig" : {
+    "appenders": [
+      {
+        "type": "console"
+      },
+      {
+        "category": [ "doohan","console" ],
+        "type": "dateFile",
+        "filename": "../logs/",
+        "alwaysIncludePattern": true,
+        "pattern": "doohan-yyyyMMdd.log"
+      }
+    ],
+    "replaceConsole": true,
+    "levels":
+    {
+      "console":"ALL"
+    }
+  }
+}
