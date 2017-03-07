@@ -13,35 +13,35 @@ router.use('/', index.routes(), index.allowedMethods());
 router.use('/movies', movies.routes(), movies.allowedMethods());
 
 #index.js
-var router = require('koa-router')();
-
-router.get('/', async function (ctx, next) {
-  ctx.state = {
-    title: 'koa2 title'
-  };
-  
-  await ctx.render('index', {
-  });
-})
-module.exports = router;
+//var router = require('koa-router')();
+//
+//router.get('/', async function (ctx, next) {
+//  ctx.state = {
+//    title: 'koa2 title'
+//  };
+//  
+//  await ctx.render('index', {
+//  });
+//})
+//module.exports = router;
 
 
 #movies.js
-let router = require('koa-router')();
-let movieModel = require('../models/movies')
-
-router.get('/', function (ctx, next) {
-    ctx.body = 'this a index response!';
-});
-
-router.get('/movie', async function (ctx, next) {
-    //ctx.set('Access-Control-Allow-Origin', '*');
-    ctx.set('Access-Control-Allow-Origin', 'http://localhost:8080'); //跨域
-    ctx.body = await movieModel.getOneMovie();
-});
-
-router.get('/user', function (ctx, next) {
-    ctx.body = 'this a user response!';
-});
-
-module.exports = router;
+//let router = require('koa-router')();
+//let movieModel = require('../models/movies')
+//
+//router.get('/', function (ctx, next) {
+//    ctx.body = 'this a index response!';
+//});
+//
+//router.get('/movie', async function (ctx, next) {
+//    //ctx.set('Access-Control-Allow-Origin', '*');
+//   ctx.set('Access-Control-Allow-Origin', 'http://localhost:8080'); //跨域
+//    ctx.body = await movieModel.getOneMovie();
+//});
+//
+//router.get('/user', function (ctx, next) {
+//    ctx.body = 'this a user response!';
+//});
+//
+//module.exports = router;
