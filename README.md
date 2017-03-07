@@ -7,11 +7,12 @@ npm install
 # 开启本地服务器localhost:3000
 npm start
 
-路由
+#路由
+
 router.use('/', index.routes(), index.allowedMethods());
 router.use('/movies', movies.routes(), movies.allowedMethods());
 
-index.js
+#index.js
 var router = require('koa-router')();
 
 router.get('/', async function (ctx, next) {
@@ -25,7 +26,7 @@ router.get('/', async function (ctx, next) {
 module.exports = router;
 
 
-movies.js
+#movies.js
 let router = require('koa-router')();
 let movieModel = require('../models/movies')
 
@@ -42,6 +43,5 @@ router.get('/movie', async function (ctx, next) {
 router.get('/user', function (ctx, next) {
     ctx.body = 'this a user response!';
 });
-
 
 module.exports = router;
