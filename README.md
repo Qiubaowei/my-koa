@@ -1,4 +1,4 @@
-####这是一个简单的koa小demon 配合我的另一个vue 简单实现了前后端分离（最最最简单的）
+#### 这是一个简单的koa小demon 配合我的另一个vue 简单实现了前后端分离（最最最简单的）
 
 
 ##### 安装依赖
@@ -10,7 +10,7 @@
 
 
 
-#####路由
+##### 路由
 
     router.use('/', index.routes(), index.allowedMethods());
     router.use('/movies', movies.routes(), movies.allowedMethods());
