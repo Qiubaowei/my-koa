@@ -8,10 +8,12 @@
 >npm start
 
 #####路由
+
     router.use('/', index.routes(), index.allowedMethods());
     router.use('/movies', movies.routes(), movies.allowedMethods());
 
-#####index.js
+>index.js
+
     var router = require('koa-router')();
     router.get('/', async function (ctx, next) {
       ctx.state = {
@@ -22,13 +24,14 @@
     })
     module.exports = router;
 
-#####movies.js
+>movies.js
+
     let router = require('koa-router')();
     let movieModel = require('../models/movies')
 
     router.get('/', function (ctx, next) {
         ctx.body = 'this a index response!';
-    });<br>
+    });
 
     router.get('/movie', async function (ctx, next) {
         //ctx.set('Access-Control-Allow-Origin', '*');
